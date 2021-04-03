@@ -1,0 +1,37 @@
+.form__div{
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+      justify-content: space-around;
+      margin: auto;
+  }
+
+  input[type=text] {
+	border: 3px solid  hsl(293, 89%, 11%);
+	border-radius: 8px;
+	padding: 12px 20px;
+  font-family: cursive;
+  }
+
+  .button_style{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    float: right;
+  }
+
+  button{
+    border: 3px solid  hsl(293, 89%, 11%);
+      background-color: hsl(294, 12%, 53%);
+      padding: 8px;
+    border-radius: 8px;
+    color: white;
+    text-shadow: 1px 1px hsl(293, 89%, 11%) ;
+    font-family: cursive;
+    margin: 5px;   
+    }
+  
+    .buttons p{
+      max-width:150px;
+      word-wrap:break-word;
+    }
