@@ -49,16 +49,21 @@ function App() {
     console.log(stateTodos);
   }
 
+  function clearAllBtn(){
+    alert("Are you sure you want to clear all of your todos?");
+    setState([]);
+  }
+
 
   return (
     <div className="App">
         <h3 className="h_style">To Do List App</h3>
         <main>
-        <NewTodoInput placeholder = {placeholderTxt}  addTodo= {addNewTodo}/>
+        <div className= "form__div">
+          <button  id= "ClearAllBtn" onClick = {() => clearAllBtn()}>Clear all </button> 
+          <NewTodoInput placeholder = {placeholderTxt}  addTodo= {addNewTodo}/>
+        </div>
         <TodoList todos={stateTodos} deleteTodo= {handleDelete}  completedTodo= {handleCompleteTodo}/>
-        
-        <button  id= "ClearAllBtn" onClick = {() => setState([])}>Clear all </button>
-
       </main>
       <footer >Some copyright info here</footer>
 

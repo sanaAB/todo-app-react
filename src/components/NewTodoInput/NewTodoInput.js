@@ -15,18 +15,21 @@ function NewTodoInput({addTodo}){
 	}
 
 	function saveTodo(){
-		const newTodo = {
+
+		if(inputValue.length < 2){alert("Cannot add an empty task, please provide a valid input")}
+		else
+{		const newTodo = {
 					id: (Date.now() + Math.random()).toString(),
 					title: inputValue,
 					isDone: false
 				  };
 				  addTodo(newTodo);
-				  setInputValue(" ");
+				  setInputValue(" ");}
 
 	}//end of saveTodo
 
     return (
-        <div id="todoForm" className="form__div">
+        <div id="todoForm">
 				<input 
 				type="text" 
 				id="todoInput" 
@@ -36,11 +39,7 @@ function NewTodoInput({addTodo}){
 				onChange= {handleInputValue}
 				></input>
 
-				<div className= "button_style">
-				<button 
-				        onClick={saveTodo}
-						>New todo</button>
-				</div>
+				<button onClick={saveTodo} className= "button_style">  New todo</button>
           </div>
     )
     

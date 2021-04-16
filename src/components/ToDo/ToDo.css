@@ -35,10 +35,12 @@
         padding: 0;
         margin: 0;
       }
+ .delete_Btn{
+        align-self: flex-end;  }
 
     
-     /*.checked-todo {
+  .checked-todo {
         text-decoration: line-through;
       }
-      */
+     
       

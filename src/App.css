@@ -53,7 +53,16 @@ body{
   }
 }
 
+.form__div{
+    display: flex ;
+    align-items: center;
+    flex-direction: row;
+  	justify-content: space-around;
+  }
+
+
 footer {
+  position: sticky;
   width: 100%;
   background-color:hsl(293, 89%, 11%);
   color: white;

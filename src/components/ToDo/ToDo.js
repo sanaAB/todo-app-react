@@ -10,7 +10,7 @@ function ToDo({title, isDone, deleteTodo, id, completedTodo}){
 
         // inside onChange call completedTodo with id as arg
         // onChange={}
-        <li className = "checked-todo li_style">
+        <li className = {`li_style ${isDone ? "checked-todo" : "li_style"}`}>
             <div className='buttons'>
 			<input type='checkbox' checked = {isDone} onChange={() => completedTodo(id)}/>
 		  	<p  id="p"  >
