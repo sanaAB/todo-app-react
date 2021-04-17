@@ -8,32 +8,17 @@ import React, {useState} from "react";
 
 function App() {
   const placeholderTxt = "passed using props";
-  const todosData = [
-    {
-      id: "134713749319748913",
-      title: "Do grocery",
-      isDone: true
-    },
-    {
-      id: "34954629579425425",
-      title: "Enjoy your eastern with family",
-      isDone: false
-    },
-    {
-      id: "724095784927859",
-      title: "Learn about props",
-      isDone: true
-    }
-  ];
-  const[stateTodos, setState] = useState(todosData);
+
+  
+  const[stateTodos, setState] = useState(JSON.parse(localStorage.getItem("todos")) || []);
 
   function handleDelete(todoId){
-    setState(stateTodos.filter(({ id }) => id !== todoId));
+    save(stateTodos.filter(({ id }) => id !== todoId));
   }
 
   function addNewTodo(newTodo){
     const newTodos = [newTodo, ...stateTodos];
-    setState(newTodos);
+    save(newTodos);
   }
 
   function handleCompleteTodo(todoId) {
@@ -45,14 +30,20 @@ function App() {
       return todo;
     });
 
-    setState(newTodos);
-    console.log(stateTodos);
+    save(newTodos);
   }
 
   function clearAllBtn(){
     alert("Are you sure you want to clear all of your todos?");
-    setState([]);
+    save([]);
   }
+
+  function save(newState) {
+    setState(() => {
+      localStorage.setItem("todos", JSON.stringify(newState));
+      return newState;
+    });
+    }
 
 
   return (
@@ -65,7 +56,7 @@ function App() {
         </div>
         <TodoList todos={stateTodos} deleteTodo= {handleDelete}  completedTodo= {handleCompleteTodo}/>
       </main>
-      <footer >Some copyright info here</footer>
+      <footer>Some copyright info here</footer>
 
     </div>
   );

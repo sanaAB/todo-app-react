@@ -1,5 +1,6 @@
 .li_style{
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: baseline;
     align-content: space-around;
@@ -36,6 +37,7 @@
         margin: 0;
       }
  .delete_Btn{
+        flex-direction: row;
         align-self: flex-end;  }
 
     

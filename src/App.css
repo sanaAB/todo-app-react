@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+}
+
+
 .App {
   text-align: center;
 }
@@ -44,6 +49,32 @@ body{
   color: #61dafb;
 }
 
+.form__div{
+  display: flex ;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.content {
+  flex: 1 0 auto;
+  text-align: center;
+  background-color: white;
+}
+
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:hsl(293, 89%, 11%);
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  padding-top: 10px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -53,20 +84,4 @@ body{
   }
 }
 
-.form__div{
-    display: flex ;
-    align-items: center;
-    flex-direction: row;
-  	justify-content: space-around;
-  }
-
-
-footer {
-  position: sticky;
-  width: 100%;
-  background-color:hsl(293, 89%, 11%);
-  color: white;
-  text-align: center;
-  font-size: 12px;  
-  padding: 10px;
-}
+  
