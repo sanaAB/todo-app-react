@@ -66,7 +66,7 @@ function App() {
       }
       
       );
-      setState(newTodos);
+      save(newTodos);
     }
 
   return (
