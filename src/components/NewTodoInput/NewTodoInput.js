@@ -1,5 +1,5 @@
-import "./NewTodoInput.css"
 import React, {useState} from "react";
+import "./NewTodoInput.css"
 
 function NewTodoInput({addTodo}){
 	const[inputValue, setInputValue] = useState( " ");

@@ -37,8 +37,9 @@
         margin: 0;
       }
  .delete_Btn{
-        flex-direction: row;
-        align-self: flex-end;  }
+      margin-right: 0;
+      margin-left: auto;  
+        }
 
     
   .checked-todo {
