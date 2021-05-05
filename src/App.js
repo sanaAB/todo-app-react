@@ -50,11 +50,14 @@ function App() {
 	}
 
   function save(newState) {
-    setState(() => {
-      localStorage.setItem("todos", JSON.stringify(newState));
-      return newState;
-    });
-    }
+    localStorage.setItem('todos', JSON.stringify(newTodos));
+    setState(newTodos);
+  }
+    // setState(() => {
+    //   localStorage.setItem("todos", JSON.stringify(newState));
+    //   return newState;
+    // });
+    // }
 
     function handleEdit(editedId, editedTitle){
       const newTodos = stateTodos.map((todo) =>
